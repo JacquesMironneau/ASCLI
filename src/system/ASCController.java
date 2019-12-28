@@ -1,6 +1,9 @@
 package system;
 
-public interface ASCController {
+public abstract class ASCController {
 
-	
+	public void Send()
+	{
+		
+	}
 }
