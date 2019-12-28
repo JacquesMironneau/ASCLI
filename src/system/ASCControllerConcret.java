@@ -36,3 +36,6 @@ public class ASCControllerConcret implements ASCController {
 		// TODO Auto-generated method stub
 	}
 }
+
+
+
