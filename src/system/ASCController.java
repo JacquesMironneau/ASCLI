@@ -1,6 +1,6 @@
 package system;
 
-public interface ASCModel {
+public interface ASCController {
 
 	//Play a playlist or a track
 	public void play();
