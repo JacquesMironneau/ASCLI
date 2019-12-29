@@ -1,5 +1,5 @@
 package system.controller;
 
-public class SpotifyHTTP {
+public class SpotifyHTTP implements httptrucpascrééencore{
 
 }
