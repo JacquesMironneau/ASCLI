@@ -1,4 +1,4 @@
-package view;
+package system.view;
 
 public class ASCDisplayTerminal implements ASCDisplay {
 

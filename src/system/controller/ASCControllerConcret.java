@@ -1,6 +1,6 @@
 package system.controller;
 
-import view.ASCDisplay;
+import system.view.ASCDisplay;
 
 public class ASCControllerConcret implements ASCController {
 
