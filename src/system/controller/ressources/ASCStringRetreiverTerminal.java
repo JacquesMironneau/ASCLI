@@ -15,20 +15,25 @@ public class ASCStringRetreiverTerminal implements ASCStringRetreiver
 	public ASCCommand retreive(String toRetreive) throws UserInputException 
 	{
 		String tmp[] = toRetreive.split(" ");
-		if (tmp.length < 2) throw new UserInputException();
+		if (tmp.length < 1) throw new UserInputException();
 		
 		//Creating the string of parameters (for instance with title that are several words:
 		//Let it be => only one string
-		
-		StringBuilder builder = new StringBuilder();
-		int i;
-		for (i = 1; i < tmp.length; ++i)
-			builder.append(tmp[i]+" ");
+		String res = "";
+		if (tmp.length >= 2)
+		{
+			StringBuilder builder = new StringBuilder();
+			int i;
+			for (i = 1; i < tmp.length; ++i)
+				builder.append(tmp[i]+" ");
 
-		builder.deleteCharAt(builder.length() - 1);
+			builder.deleteCharAt(builder.length() - 1);
+			res = builder.toString();
+		}
+	
 		
 		
-		return new ASCCommand(matchInputParameterWithExistingAction(tmp[0]),builder.toString());
+		return new ASCCommand(matchInputParameterWithExistingAction(tmp[0]),res);
 	}
 	
 	

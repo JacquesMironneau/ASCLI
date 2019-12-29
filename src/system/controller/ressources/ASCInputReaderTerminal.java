@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class ASCInputReaderTerminal implements ASCInputReader {
 
 	//Read the line from terminal if exist (wait for something to be written)
+	
 	@Override
 	public String read() 
 	{

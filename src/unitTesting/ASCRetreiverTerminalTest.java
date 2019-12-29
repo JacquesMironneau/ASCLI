@@ -23,20 +23,42 @@ class ASCRetreiverTerminalTest
 		try
 		{
 			res = sr.retreive(input);
+			testAction(res, "Let it be", ASCAction.PLAY);
+			
 			res = sr.retreive("play ez4ence");
+			testAction(res, "ez4ence", ASCAction.PLAY);
+			
+			res = sr.retreive("add ez4ence");
+			testAction(res, "ez4ence", ASCAction.ADD);
+			
+			res = sr.retreive("pause ez4ence");
+			testAction(res, "ez4ence", ASCAction.PAUSE);
+			
+			res = sr.retreive("skip ez4ence");
+			testAction(res, "ez4ence", ASCAction.SKIP);	
+
+			res = sr.retreive("skip");
+			testAction(res, "", ASCAction.SKIP);
+			
+
+			res = sr.retreive("skip ez4ence winlandia");
+			testAction(res, "ez4ence winlandia", ASCAction.SKIP);
+			
+			res = sr.retreive("np");
+			testAction(res, "", ASCAction.NOW_PLAYING);
+			
+			
 		} catch (UserInputException e)
 		{
 			e.printStackTrace();
 		}
-		
-		testAction(res, "ez4ence", ASCAction.PLAY);
 		
 		//fail("Not yet implemented");
 	}
 	
 	private void testAction(ASCCommand c, String expected, ASCAction action)
 	{
-		assertEquals(ASCAction.PLAY, c.getAction());
+		assertEquals(action, c.getAction());
 		assertEquals(expected, c.getParameter());
 	}
 

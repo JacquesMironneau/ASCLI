@@ -8,6 +8,8 @@ public class ASCCommand
 	
 	private String parameter;
 	
+	public static final String COMMAND_SEPARATOR = "[ascp]";
+	
 	public ASCCommand(ASCAction action, String s)
 	{
 		this.action = action;
@@ -23,5 +25,10 @@ public class ASCCommand
 	public String getParameter() 
 	{
 		return parameter;
+	}
+	
+	public String toString()
+	{
+		return this.action + ASCCommand.COMMAND_SEPARATOR + this.parameter;
 	}
 }
