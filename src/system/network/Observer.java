@@ -2,6 +2,7 @@ package system.network;
 
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public abstract class Observer
@@ -11,7 +12,7 @@ public abstract class Observer
 	
 	public Observer()
 	{
-		this.subjects = new ArrayList<Socket>();
+		this.subjects = Collections.synchronizedList(new ArrayList<Socket>());
 	}
 	
 	public void addClient(Socket aNewClient)

@@ -40,7 +40,7 @@ public class TCPServerInitializer implements Runnable
 			{
 				Socket aNewClient = this.server.accept();
 				this.emitter.addClient(aNewClient);
-				
+				System.out.println("New client received");
 				new Thread(new TCPServerReceiver(aNewClient, this.controller)).start();
 				
 			} catch (IOException e)

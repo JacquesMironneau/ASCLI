@@ -21,6 +21,7 @@ public class TCPServerEmitter extends Observer implements ASCDisplay
 		
 		for(Socket sock : this.subjects)
 		{
+			System.out.println(sock);
 			try
 			{
 				new BufferedWriter(new OutputStreamWriter(sock.getOutputStream())).write("Error");;
@@ -38,9 +39,14 @@ public class TCPServerEmitter extends Observer implements ASCDisplay
 	{
 		for(Socket sock : this.subjects)
 		{
+			
 			try
 			{
-				new BufferedWriter(new OutputStreamWriter(sock.getOutputStream())).write("Success");;
+
+				BufferedWriter buf = new BufferedWriter(new OutputStreamWriter(sock.getOutputStream()));
+				buf.write("Success\n");
+				buf.flush();
+				System.out.println("Emitting !");
 			} catch (IOException e)
 			{
 				e.printStackTrace();
@@ -57,7 +63,9 @@ public class TCPServerEmitter extends Observer implements ASCDisplay
 		{
 			try
 			{
-				new BufferedWriter(new OutputStreamWriter(sock.getOutputStream())).write("Track");;
+				BufferedWriter buf = new BufferedWriter(new OutputStreamWriter(sock.getOutputStream()));
+				buf.write("Track");
+				buf.flush();
 			} catch (IOException e)
 			{
 				e.printStackTrace();

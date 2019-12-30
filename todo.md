@@ -4,9 +4,10 @@ Côté TERMINAL:
 	- InputReader
 	- system.network
 
-    TCP[Client|Server]Initializer
-    TCP[Client|Server]Receiver
-    TCP[Client|Server]Emitter
+    TCP[Client|Server]Initializer: d
+    TCP[Client|Server]Receiver: d
+    TCP[Client|Server]Emitter: d
+    ASCProtocol: x
 
 Côté API: 
  - ?

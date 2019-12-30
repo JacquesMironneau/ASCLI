@@ -3,27 +3,35 @@ package system.view;
 public class ASCDisplayTerminal implements ASCDisplay {
 
 	@Override
-	public void displayError() {
-		// TODO Auto-generated method stub
+	public void displayError()
+	{
 		
 	}
 
 	@Override
-	public void displaySuccess() {
-		// TODO Auto-generated method stub
+	public void displaySuccess() 
+	{
+		prefix();
+		System.out.println("Success");
 		
 	}
 
 	@Override
-	public void displayTrack() {
-		// TODO Auto-generated method stub
+	public void displayTrack() 
+	{
+		prefix();
 		
 	}
 
 	@Override
-	public void displayNext() {
-		// TODO Auto-generated method stub
+	public void displayNext() 
+	{
+		prefix();
 		
 	}
 
+	private void prefix()
+	{
+		System.out.print("[VIEW] ");
+	}
 }
