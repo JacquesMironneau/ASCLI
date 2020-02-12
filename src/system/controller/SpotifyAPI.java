@@ -27,6 +27,7 @@ public class SpotifyAPI {
 //	  private final URI redirectUri;
 //	  private String accessToken;
 //	  private String refreshToken;
+	private Object SpotifyHTTP;
 	  
 	 private SpotifyAPI(){
 		this.SpotifyHTTP = builder.spotifyHttp;
