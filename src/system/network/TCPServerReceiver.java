@@ -8,17 +8,17 @@ import java.lang.reflect.Method;
 import java.net.Socket;
 
 import exception.MethodDoesNotExistException;
-import system.controller.ASCController;
+import system.controller.Icontroller;
 import system.controller.ressources.ASCCommand;
 
 
 public class TCPServerReceiver implements Runnable
 {
-	private ASCController controller;
+	private Icontroller controller;
 
 	private Socket socketToListen;
 	
-	public TCPServerReceiver(Socket sock, ASCController ctrl)
+	public TCPServerReceiver(Socket sock, Icontroller ctrl)
 	{
 		this.socketToListen = sock;
 		this.controller = ctrl;
@@ -76,7 +76,7 @@ public class TCPServerReceiver implements Runnable
 	
 	private Method bestMethodFinder(String str) throws MethodDoesNotExistException
 	{
-		for (Method m : ASCController.class.getMethods())
+		for (Method m : Icontroller.class.getMethods())
 		{
 			if (m.getName().contains(str))
 				return m;

@@ -1,6 +1,6 @@
 package system.controller;
 
-public interface ASCController {
+public interface Icontroller {
 
 	//Play a playlist or a track
 	public void play();

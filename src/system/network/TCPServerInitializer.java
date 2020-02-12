@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import system.controller.ASCController;
+import system.controller.Icontroller;
 
 public class TCPServerInitializer implements Runnable
 {
@@ -14,7 +14,7 @@ public class TCPServerInitializer implements Runnable
 	
 	private Observer emitter;
 	
-	private ASCController controller;
+	private Icontroller controller;
 	
 	
 	public TCPServerInitializer(Observer obs)

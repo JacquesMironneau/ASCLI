@@ -1,8 +1,8 @@
 package system.network;
 
-import system.controller.ASCController;
+import system.controller.Icontroller;
 
-public class TCPClientEmittter implements ASCController
+public class TCPClientEmittter implements Icontroller
 {
 	
 	// Write only
