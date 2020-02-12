@@ -11,13 +11,13 @@ import system.controller.ressources.ASCStringRetreiver;
 public class Instance 
 {
 	//Will be 
-	private ASCController controller;
+	private Icontroller controller;
 	
 	private ASCInputReader reader;
 	
 	private ASCStringRetreiver retreiver;
 
-	public Instance (ASCController myModel, ASCInputReader reader, ASCStringRetreiver retreiver)
+	public Instance (Icontroller myModel, ASCInputReader reader, ASCStringRetreiver retreiver)
 	{
 		this.controller = myModel;
 		this.reader = reader;
